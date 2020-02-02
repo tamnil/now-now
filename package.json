@@ -10,5 +10,9 @@
     "now-now"
   ],
   "author": "Tamnil Saito Junior",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "puppeteer": "^2.1.0"
+  }
 }

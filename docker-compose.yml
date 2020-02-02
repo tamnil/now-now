@@ -1,0 +1,57 @@
+version: "3"
+services:
+  mosquitto:
+    build:
+      context: ./docker/mosquitto
+      dockerfile: Dockerfile
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./app:/app
+    # links:
+      # - app
+  # nginx:
+  #   build:
+  #     context: ./docker/nginx
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx:/etc/nginx/conf.d
+  #     - ./logs/nginx:/var/log/nginx
+  #     - ./app:/var/www/html
+  #     - ./ssl:/etc/nginx/ssl
+  #   links:
+  #     - app
+    # restart: always
+  #
+  # mysql:
+  #   build:
+  #     context: ./docker/mysql
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - ./db-data:/var/lib/mysql
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=aqwe123
+  #   # restart: always
+  # app:
+  #   build:
+  #     context: ./docker/php
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - ./app:/var/www/html
+  #     - ./php.ini://usr/local/etc/php/php.ini
+  #
+  #   environment:
+  #     - app_DB_NAME=db
+  #     - app_TABLE_PREFIX=db_
+  #     - app_DB_HOST=mysql
+  #     - app_DB_PASSWORD=aqwe123
+  #   links:
+  #     - mysql
+    # restart: always
