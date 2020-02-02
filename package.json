@@ -1,0 +1,14 @@
+{
+  "name": "now-now",
+  "version": "0.0.1",
+  "description": "JIT JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "now-now"
+  ],
+  "author": "Tamnil Saito Junior",
+  "license": "MIT"
+}
